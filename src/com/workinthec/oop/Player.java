@@ -10,7 +10,9 @@ public class Player {
             this.healthPercentage = 100;
         } else if (healthPercentage < 0) {
             this.healthPercentage = 0;
-        }else{this.healthPercentage=healthPercentage;}
+        } else {
+            this.healthPercentage = healthPercentage;
+        }
         this.name = name;
         this.weapon = Weapon.valueOf(weapon.toUpperCase());
 
@@ -31,7 +33,7 @@ public class Player {
         if (healthPercentage + healthPotion > 100) {
             this.healthPercentage = 100;
         }
-        return this.healthPercentage= this.healthPercentage + healthPotion;
+        return this.healthPercentage = this.healthPercentage + healthPotion;
     }
 
     @Override

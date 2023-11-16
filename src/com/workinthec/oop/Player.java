@@ -5,7 +5,7 @@ public class Player {
     private int healthPercentage;
     private Weapon weapon;
 
-    public Player(String name, int healthPercentage, String weapon) {
+    public Player(String name, int healthPercentage, Weapon weapon) {
         if (healthPercentage > 100) {
             this.healthPercentage = 100;
         } else if (healthPercentage < 0) {
@@ -14,7 +14,7 @@ public class Player {
             this.healthPercentage = healthPercentage;
         }
         this.name = name;
-        this.weapon = Weapon.valueOf(weapon.toUpperCase());
+        this.weapon = weapon;
 
     }
 

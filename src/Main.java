@@ -1,5 +1,6 @@
 import com.workinthec.oop.Player;
 import com.workinthec.oop.Point;
+import com.workinthec.oop.Weapon;
 
 public class Main {
     public static void main(String[] args) {
@@ -18,10 +19,10 @@ public class Main {
         System.out.println("distance()= " + point.distance());
         System.out.println("Player:----------");
 
-        Player firstPlayer = new Player("Kerem", 125, "SWORD");
+        Player firstPlayer = new Player("Kerem", 125, Weapon.AXE);
         System.out.println(firstPlayer);
 
-        Player secondPlayer = new Player("Joe", -50, "AXE");
+        Player secondPlayer = new Player("Joe", -50,Weapon.SWORD);
         System.out.println(secondPlayer);
 
         secondPlayer.restoreHealth(77);

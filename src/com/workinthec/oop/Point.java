@@ -4,6 +4,10 @@ public class Point {
     private int x;
     private int y;
 
+    public Point(int x, int y) {
+        this.x = x;
+        this.y = y;
+    }
     public int getX() {
         return x;
     }
@@ -20,11 +24,6 @@ public class Point {
         this.y = y;
     }
 
-    public Point(int x, int y) {
-        this.x = x;
-        this.y = y;
-    }
-
     public double distance(int x, int y) {
         return Math.sqrt((this.x - x) * (this.x - x) + (this.y - y) * (this.y - y));
     }
@@ -34,6 +33,8 @@ public class Point {
     }
 
     public double distance(Point p) {
-        return distance(p.getX(), p.getY());
+        if(p!=null){
+            return distance(p.getX(), p.getY());
+        } return -1;
     }
 }
